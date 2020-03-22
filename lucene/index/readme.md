@@ -1,0 +1,1 @@
+Carpeta para el índice de Lucene

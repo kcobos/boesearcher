@@ -1,0 +1,13 @@
+version: '3.4'
+
+services: 
+    lucene:
+        image: lucene
+        build: .
+        volumes: 
+            - ./app.py:/app/app.py:ro           # Aplicación
+            - ./templates:/app/templates:ro     # Plantillas para Flask
+            - ./documentos:/app/documentos      # Directorio para guardar los documentos (boletines)
+            - ./lucene:/app/lucene              # Directorio para guardar el índice de Lucene
+        ports: 
+            - 5000:5000
